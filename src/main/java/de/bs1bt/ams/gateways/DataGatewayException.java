@@ -1,4 +1,4 @@
-package de.bs1bt.ams.model;
+package de.bs1bt.ams.gateways;
 
 public class DataGatewayException extends Exception{
     public DataGatewayException(String s) {
