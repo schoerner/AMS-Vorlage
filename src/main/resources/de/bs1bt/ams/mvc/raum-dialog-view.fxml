@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.bs1bt.ams.mvc.RaumDialogController">
+   <children>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Bezeichnung" />
+            <Label text="Länge in cm" GridPane.rowIndex="1" />
+            <Label text="Breite in cm" GridPane.rowIndex="2" />
+            <Label text="Fläche in qm" GridPane.rowIndex="3" />
+             <TextField id="txtBezeichnung" GridPane.columnIndex="1" />
+             <TextField id="txtLaenge" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+             <TextField id="txtBreite" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+             <TextField id="txtFlaeche" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button id="btnOK" mnemonicParsing="false" onAction="#okAction" text="OK" />
+            <Button id="btnAbbrechen" mnemonicParsing="false" onAction="#abbrechenAction" text="Abbrechen" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</VBox>
