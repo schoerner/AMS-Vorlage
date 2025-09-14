@@ -1,0 +1,19 @@
+name: "ams_javafx"
+services:
+  db:
+    image: mariadb:latest
+    container_name: ams_javafx_mariadb
+    restart: always
+    environment:
+      MARIADB_DATABASE: ams_fx_test
+      MARIADB_USER: schueler
+      MARIADB_PASSWORD: Geheim01
+      MARIADB_ROOT_PASSWORD: Geheim02
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./initdb:/docker-entrypoint-initdb.d
+
+volumes:
+  db_data:
