@@ -5,7 +5,7 @@ import de.bs1bt.ams.model.Raum;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class RaumMySQLDataGateway {
+public class RaumMySQLRepository {
     private Connection connection = null;
     private PreparedStatement ptmt = null;
     private ResultSet resultSet = null;

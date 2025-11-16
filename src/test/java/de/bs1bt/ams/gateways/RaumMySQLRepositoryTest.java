@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
-class RaumMySQLDataGatewayTest {
+class RaumMySQLRepositoryTest {
 
     @BeforeAll
     static void beforeAll() {
-        RaumMySQLDataGateway rg = new RaumMySQLDataGateway();
+        RaumMySQLRepository rg = new RaumMySQLRepository();
         try {
             rg.loescheTabelle();
         } catch (DataGatewayException e) {
@@ -23,7 +23,7 @@ class RaumMySQLDataGatewayTest {
 
     @Test
     void testKomplett() {
-        RaumMySQLDataGateway rg = new RaumMySQLDataGateway();
+        RaumMySQLRepository rg = new RaumMySQLRepository();
         try {
             rg.erstelleTabelle();
 
