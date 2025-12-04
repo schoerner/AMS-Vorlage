@@ -1,7 +1,7 @@
 package de.bs1bt.ams.mvc;
 
-import de.bs1bt.ams.gateways.DataGatewayException;
-import de.bs1bt.ams.gateways.RaumMySQLRepository;
+import de.bs1bt.ams.repository.DataGatewayException;
+import de.bs1bt.ams.repository.RaumMySQLRepository;
 import de.bs1bt.ams.model.Raum;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -70,7 +70,8 @@ public class MainController {
                 raumTableView.getItems().add(r);
             }
             raumTableView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-        } catch (DataGatewayException e) {
+        }
+        catch (DataGatewayException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Die Räume können nicht aus der Datenbank ausgelesen werden.");
             alert.show();
         }

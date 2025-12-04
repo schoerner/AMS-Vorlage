@@ -1,4 +1,4 @@
-package de.bs1bt.ams.gateways;
+package de.bs1bt.ams.repository;
 
 import de.bs1bt.ams.model.Raum;
 import org.junit.jupiter.api.BeforeAll;

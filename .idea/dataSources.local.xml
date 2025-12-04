@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-252.28238.7">
+    <data-source name="ams_fx_test@localhost" uuid="cdea81bf-0c00-4489-b809-b6807d3a19c0">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MARIADB" />
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
