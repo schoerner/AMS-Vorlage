@@ -1,4 +1,4 @@
-package de.bs1bt.ams.gateways;
+package de.bs1bt.ams.repository;
 
 import de.bs1bt.ams.model.Raum;
 import org.junit.jupiter.api.BeforeAll;
@@ -16,7 +16,7 @@ class RaumMySQLRepositoryTest {
         RaumMySQLRepository rg = new RaumMySQLRepository();
         try {
             rg.loescheTabelle();
-        } catch (DataGatewayException e) {
+        } catch (RepositoryException e) {
             // in Ordnung, falls Tabelle noch nicht existiert
         }
     }
@@ -70,7 +70,7 @@ class RaumMySQLRepositoryTest {
             rg.erstelle(new Raum("U7", "IT-C"));
 
             assertEquals(7, rg.holeAlle().size());
-        } catch (DataGatewayException e) {
+        } catch (RepositoryException e) {
             fail(e.getMessage());
         } catch (Exception e) {
             fail(e.getMessage());

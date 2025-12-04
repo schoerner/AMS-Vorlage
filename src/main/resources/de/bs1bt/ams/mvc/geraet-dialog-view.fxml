@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx/16"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="de.bs1bt.ams.mvc.GeraetDialogController">
+
+    <content>
+        <GridPane hgap="10.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" /> <!-- Bezeichnung -->
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" /> <!-- Hersteller -->
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" /> <!-- Modell -->
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" /> <!-- Kaufdatum -->
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" /> <!-- Garantie in Monaten -->
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" /> <!-- Defekt -->
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" /> <!-- Restgarantie -->
+            </rowConstraints>
+
+            <children>
+                <!-- Reihe 0: Bezeichnung -->
+                <Label text="Bezeichnung" GridPane.rowIndex="0" />
+                <TextField fx:id="txtBezeichnung" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <!-- Reihe 1: Hersteller -->
+                <Label text="Hersteller" GridPane.rowIndex="1" />
+                <TextField fx:id="txtHersteller" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <!-- Reihe 2: Modell -->
+                <Label text="Modell" GridPane.rowIndex="2" />
+                <TextField fx:id="txtModell" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <!-- Reihe 3: Kaufdatum -->
+                <Label text="Kaufdatum" GridPane.rowIndex="3" />
+                <DatePicker fx:id="dpKaufdatum" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <!-- Reihe 4: Garantie in Monaten -->
+                <Label text="Garantie (Monate)" GridPane.rowIndex="4" />
+                <TextField fx:id="txtGarantieMonate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <!-- Reihe 5: Defekt -->
+                <Label text="Defekt" GridPane.rowIndex="5" />
+                <CheckBox fx:id="chkDefekt" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <!-- Reihe 6: Restgarantie (nur Anzeige) -->
+                <Label text="Restgarantie (Monate)" GridPane.rowIndex="6" />
+                <Label fx:id="lblRestGarantie" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            </children>
+        </GridPane>
+    </content>
+
+    <buttonTypes>
+        <ButtonType fx:constant="OK" />
+        <ButtonType fx:constant="CANCEL" />
+    </buttonTypes>
+</DialogPane>

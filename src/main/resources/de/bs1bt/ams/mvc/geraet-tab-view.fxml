@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/16"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="de.bs1bt.ams.mvc.GeraetTabController"
+      prefHeight="522.0" prefWidth="726.0"
+      spacing="5.0">
+
+    <children>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TableView fx:id="geraetTableView">
+                    <columns>
+                        <TableColumn fx:id="columnGeraetId" prefWidth="60.0" text="ID" />
+                        <TableColumn fx:id="columnGeraetBezeichnung" prefWidth="140.0" text="Bezeichnung" />
+                        <TableColumn fx:id="columnGeraetHersteller" prefWidth="120.0" text="Hersteller" />
+                        <TableColumn fx:id="columnGeraetModell" prefWidth="120.0" text="Modell" />
+                        <TableColumn fx:id="columnGeraetDefekt" prefWidth="60.0" text="Defekt" />
+                    </columns>
+                </TableView>
+            </children>
+        </GridPane>
+
+        <ButtonBar maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0">
+            <buttons>
+                <Button id="btnGeraetAnlegen"
+                        mnemonicParsing="false"
+                        onAction="#btnGeraetAnlegenAction"
+                        text="Gerät anlegen" />
+                <Button id="btnGeraetBearbeiten"
+                        mnemonicParsing="false"
+                        onAction="#btnGeraetBearbeitenAction"
+                        text="Gerät bearbeiten" />
+                <Button id="btnGeraetLoeschen"
+                        mnemonicParsing="false"
+                        onAction="#btnGeraetLoeschenAction"
+                        text="Gerät löschen" />
+            </buttons>
+        </ButtonBar>
+    </children>
+</VBox>

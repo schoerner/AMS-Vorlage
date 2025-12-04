@@ -3,22 +3,32 @@ CREATE DATABASE IF NOT EXISTS ams_fx_test;
 USE ams_fx_test;
 
 -- --------------------------------------------------------
--- Tabellenstruktur für Tabelle `raeume`
+-- Tabellenstruktur fuer `raeume`
 -- --------------------------------------------------------
 
 CREATE TABLE `raeume` (
-                          `raum_id` int(11) NOT NULL,
-                          `bezeichnung` varchar(20) DEFAULT NULL,
-                          `gebaeude` varchar(20) DEFAULT NULL,
-                          `laenge_in_cm` double DEFAULT NULL,
-                          `breite_in_cm` double DEFAULT NULL,
-                          `verantwortlicher` varchar(20) DEFAULT NULL
+                          `raum_id` INT NOT NULL AUTO_INCREMENT,
+                          `bezeichnung` VARCHAR(20) DEFAULT NULL,
+                          `gebaeude` VARCHAR(20) DEFAULT NULL,
+                          `laenge_in_cm` DOUBLE DEFAULT NULL,
+                          `breite_in_cm` DOUBLE DEFAULT NULL,
+                          `verantwortlicher` VARCHAR(20) DEFAULT NULL,
+                          PRIMARY KEY (`raum_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-ALTER TABLE `raeume`
-    ADD PRIMARY KEY (`raum_id`);
+-- --------------------------------------------------------
+-- Tabellenstruktur fuer `geraete`
+-- --------------------------------------------------------
 
-ALTER TABLE `raeume`
-    MODIFY `raum_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+CREATE TABLE `geraete` (
+                           `geraet_id` INT NOT NULL AUTO_INCREMENT,
+                           `bezeichnung` VARCHAR(50) NOT NULL,
+                           `defekt` TINYINT(1) NOT NULL DEFAULT 0,
+                           `hersteller` VARCHAR(50) DEFAULT NULL,
+                           `modell` VARCHAR(50) DEFAULT NULL,
+                           `kauf_datum` DATE DEFAULT NULL,
+                           `garantie_monate` INT DEFAULT NULL,
+                           PRIMARY KEY (`geraet_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 COMMIT;

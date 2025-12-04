@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/16"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="de.bs1bt.ams.mvc.RaumTabController"
+      prefHeight="522.0" prefWidth="726.0"
+      spacing="5.0">
+
+    <children>
+        <!-- Tabelle für Räume -->
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TableView fx:id="raumTableView">
+                    <columns>
+                        <TableColumn fx:id="columnRaumId" prefWidth="69.0" text="ID" />
+                        <TableColumn fx:id="columnRaumBezeichnung" prefWidth="130.0" text="Bezeichnung" />
+                        <TableColumn fx:id="columnRaumGebaeude" prefWidth="75.0" text="Gebäude" />
+                        <TableColumn fx:id="columnRaumFlaeche" prefWidth="75.0" text="Fläche" />
+                    </columns>
+                </TableView>
+            </children>
+        </GridPane>
+
+        <!-- Gesamtfläche -->
+        <GridPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Gesamtfläche" />
+                <Label fx:id="lblFlaeche" text="? m²" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+
+        <!-- Buttons -->
+        <ButtonBar maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0">
+            <buttons>
+                <Button id="btnRaumAnlegen"
+                        mnemonicParsing="false"
+                        onAction="#btnRaumAnlegenAction"
+                        text="Raum anlegen" />
+                <Button id="btnRaumBearbeiten"
+                        mnemonicParsing="false"
+                        onAction="#btnRaumBearbeitenAction"
+                        text="Raum bearbeiten" />
+                <Button id="btnRaumLoeschen"
+                        mnemonicParsing="false"
+                        onAction="#btnRaumLoeschenAction"
+                        text="Raum löschen" />
+            </buttons>
+        </ButtonBar>
+    </children>
+</VBox>
